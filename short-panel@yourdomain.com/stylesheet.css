@@ -1,0 +1,23 @@
+#panel {
+    background-color: rgba(0, 0, 0, 0.0) !important; /* Couleur noire avec 50% de transparence */
+    /* box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);  Ombre subtile sous le panel */
+    /*font-size: 22px;*/
+    /*font-style: italic;*/
+    font-family: 'Ubuntu Sans Medium';
+}
+
+#panel .panel-button {
+    background-color: transparent !important; /* Boutons du panel transparents */
+    color: white !important; /* Texte des boutons en blanc */
+}
+
+#panel .panel-menu {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Menus légèrement plus opaques */
+    color: white !important; /* Texte des menus en blanc */
+}
+
+#panel .panel-menu .menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Légère surbrillance des éléments de menu au survol */
+    color: white !important; /* Texte des éléments de menu en blanc au survol */
+}
+

@@ -1,0 +1,8 @@
+{
+    "uuid": "short-panel@yourdomain.com",
+    "name": "Short Panel",
+    "description": "Extenssion raccourcissant le panneau supérieur et le rend transparent.",
+    "version": 1,
+    "shell-version": ["40", "41", "42", "43", "44", "45", "46", "47" ],
+    "url": "https://yourdomain.com"
+}
