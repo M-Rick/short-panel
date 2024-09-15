@@ -3,32 +3,32 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as Panel from 'resource:///org/gnome/shell/ui/panel.js';
 import GLib from 'gi://GLib';
 
-export default class DynamicPanelExtension extends Extension {
+export default class ShortPanelExtension extends Extension {
     enable() {
-        log("DynamicPanelExtension enabled!");
+        log("ShortPanelExtension enabled!");
 
         // Vérification si c'est X.org
         if (this._isX11()) {
-            this._adjustPanelSize(); // Ajuster la taille du panneau
+            this._adjustPanelWidth(); // Ajuster la taille du panneau
+            this._setPanelHeight(32); // Ajuster la hauteur du panneau
 
             // Positionner l'horloge avec l'offset uniquement
-            this._setClockMenuPosition(2, 2); // position = 2 (droite), offset = 2
-            this._setPanelSize(32); // Ajuster la hauteur du panneau
-            this._setPanelIconSize(14); // Ajuster la taille des icônes à 14px
-            this._setPanelButtonPadding(6); // Ajuster le padding des boutons du panneau
+            this._setClockMenuPosition(2, 4); // position (2 gauche, 1 centre, 0 droite), offset
+            this._setPanelIconSize(14); // Ajuster la taille des icônes
+            this._setPanelButtonPadding(4); // Ajuster le padding des boutons du panneau
         }
     }
 
     disable() {
-        log("DynamicPanelExtension disabled!");
+        log("ShortPanelExtension disabled!");
 
         // Remettre le panneau à sa taille normale uniquement sous X.org
         if (this._isX11()) {
-            this._resetPanelSize();
+            this._resetPanelWidth();
         }
     }
 
-    _adjustPanelSize() {
+    _adjustPanelWidth() {
         const screenWidth = Main.layoutManager.primaryMonitor.width;
         //let fixedWidth;
         let floatingWidth;
@@ -55,7 +55,7 @@ export default class DynamicPanelExtension extends Extension {
         Main.layoutManager.panelBox.width = floatingWidth;
     }
 
-    _resetPanelSize() {
+    _resetPanelWidth() {
         const screenWidth = Main.layoutManager.primaryMonitor.width;
 
         // Remettre la taille et la position du panneau à son état par défaut sans animation
@@ -69,19 +69,19 @@ export default class DynamicPanelExtension extends Extension {
 
         // Déplacement de l'horloge selon la position
         if (position === 2) {
-            Main.panel._rightBox.insert_child_at_index(clockMenu.container, 0);
+            Main.panel._leftBox.insert_child_at_index(clockMenu.container, 0);
         } else if (position === 1) {
             Main.panel._centerBox.insert_child_at_index(clockMenu.container, 0);
         } else {
-            Main.panel._leftBox.insert_child_at_index(clockMenu.container, 0);
+            Main.panel._rightBox.insert_child_at_index(clockMenu.container, 0);
         }
 
         // Appliquer l'offset de positionnement
         clockMenu.container.translation_x = offset;
     }
-
-    _setPanelSize(size) {
-        // Ajuster la taille du panneau
+    
+    _setPanelHeight(size) {
+        // Ajuster la hauteur du panneau
         Main.layoutManager.panelBox.height = size;
     }
 
