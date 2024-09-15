@@ -2,6 +2,8 @@ A simple Gnome Shell Extension to resize the Top Panel and give it transparency.
 
 This extension has absolutely no settings at all to make it as simple as possible in order to maintain compatibility with further Gnome updates. You can tweak the transparency and the size of the Gnome Panel manually by editing the code and the CSS.
 
+The extension will customize the panel height and length sizes, the icons size and the button padding. The code will change the panel only under X11. In Wayland mode, only the custom CSS will be used.
+
 ![Capture d’écran du 2024-09-15 14-20-25](https://github.com/user-attachments/assets/c8e26820-1e28-4f6a-b345-523530e22efb)
 
 ![Capture d’écran du 2024-09-15 14-20-32](https://github.com/user-attachments/assets/2d74acbc-1731-429f-8ad9-6982f5cb706b)
