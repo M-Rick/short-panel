@@ -15,6 +15,8 @@ Download ShortPanel and place it in `~/.local/share/gnome-shell/extensions`.
 
 Enable the extension with `gnome-extensions enable short-panel@yourdomain.com`.
 
+You can adjust the size of the panel by editing the `extension.js` file in the extension.
+
 #### XFCE4
 
 We get the global menu by using XFCE4.
