@@ -16,6 +16,7 @@ Download ShortPanel and place it in `~/.local/share/gnome-shell/extensions`.
 Enable the extension with `gnome-extensions enable short-panel@yourdomain.com`.
 
 You can adjust the size of the panel by editing the `extension.js` file in the extension.
+Just change the size at this line `panelWidth = 480 * scalingFactor;`. You can change 480 to something bigger or smaller. For example, if you use a 200% upscale, you should set the size to 700 `panelWidth = 700 * scalingFactor;`.
 
 #### XFCE4
 
