@@ -4,6 +4,8 @@ This extension has absolutely no settings at all to make it as simple as possibl
 
 The extension will customize the panel height and length sizes, the icons size and the button padding. The code will change the panel only under X11. In Wayland mode, only the custom CSS will be used.
 
+It is completely stable, I sue daily and add no crash. It can be done using Budgie Panel instead, but it is unstable and can crash sometimes.
+
 # How to use
 
 First, you need to install Just Perfection Gnome Shell extension. I'll try to remove it in a next update.
