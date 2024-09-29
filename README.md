@@ -126,7 +126,7 @@ rm -f just-perfection
 
 In order to get everything working, you need to restart your session.
 
-I will make later a shell script in order to automatize all of this.
+I will make later a shell script to automatize all of this.
 
 
 # Screenshots
