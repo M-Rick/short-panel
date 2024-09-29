@@ -35,8 +35,8 @@ export default class ShortPanelExtension extends Extension {
             panelWidth = screenWidth * 0.26;  // 26% de la largeur de l'écran
         } else {
             // Pour les écrans de plus de 1440px de large
-            //panelWidth = 480 * scalingFactor; // Largeur fixe de 462 px pour un scaling de 100 %
-            panelWidth = 700; // Largeur de 700 px pour un scaling de 200 %
+            panelWidth = 480 * scalingFactor; // Largeur fixe de 462 px pour un scaling de 100 %
+            //panelWidth = 700; // Largeur de 700 px pour un scaling de 200 %
             //panelWidth = screenWidth * 0.23;  // 23% de la largeur de l'écran pour un scaling de 100 %
             //panelWidth = screenWidth * 0.25;  // 25% de la largeur de l'écran pour un scaling de 200 %
         }
