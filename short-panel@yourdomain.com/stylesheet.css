@@ -1,20 +1,26 @@
 #panel {
-    background-color: rgba(0, 0, 0, 0.0) !important; /* Couleur noire avec 50% de transparence */
+    background-color: transparent;
+    font-family: 'Ubuntu Sans' !important;
+    font-style: normal !important;
+    font-weight: 500;
     font-size: 14px;
-    font-family: 'Ubuntu Sans Medium';
+    padding: 1px 0 1px 0;
 }
 
 #panel .panel-button {
-    background-color: transparent !important; /* Boutons du panel transparents */
-    color: white !important; /* Texte des boutons en blanc */
+    color: white !important;
+    padding: 0px !important;
 }
 
-#panel .panel-menu {
-    background-color: rgba(0, 0, 0, 0.8) !important; /* Menus légèrement plus opaques */
-    color: white !important; /* Texte des menus en blanc */
+#panel #quickSettings {
+    -st-x-align: end;
 }
 
-#panel .panel-menu .menu-item:hover {
-    background-color: rgba(255, 255, 255, 0.1) !important; /* Légère surbrillance des éléments de menu au survol */
-    color: white !important; /* Texte des éléments de menu en blanc au survol */
+#panel #quickSettings > StBoxLayout {
+    -st-box-flow: end; 
+    -st-x-align: end;  
+    margin-left: 1px; 
+    margin-right: 1px; 
+    spacing: 0px;
 }
+
